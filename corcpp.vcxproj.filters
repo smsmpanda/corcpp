@@ -18,5 +18,8 @@
     <ClCompile Include="hello.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="global.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
