@@ -59,7 +59,7 @@ void C_TypePrint()
 	printf("double ---> %lf\n", n5);
 
 	printf("\n");
-} 
+}
 
 /// <summary>
 /// 计算两数之和
@@ -149,15 +149,63 @@ void C_Ifelse() {
 	}
 }
 
+/// <summary>
+/// Sizeof & Array
+/// </summary>
+void C_Sizeof() {
+	int arr[] = { 1,2,3,4,5,6,7 };
+	int len = sizeof(arr) / sizeof(arr[0]);
+	printf("Array variable arr length is %d\n", len);
+
+	int a = 10;
+	printf("sizeof(a) : %d\n ", sizeof(a));
+	printf("sizeof(int) : %d\n", sizeof(int));
+	printf("sizeof a : %d\n", sizeof a);
+	printf("sizeof arr : %d\n", sizeof(arr));
+
+
+	int arr1[4] = { 1,2,3,4 };
+	printf("%d\n", arr1[0]);
+	printf("%d\n", arr1[1]);
+	printf("%d\n", arr1[2]);
+	printf("%d\n", arr1[3]);
+}
+
+/// <summary>
+/// 函数实现
+/// </summary>
+/// <param name="x"></param>
+/// <param name="y"></param>
+/// <returns></returns>
+int Max(int x, int y) {
+	if (x > y)
+		return x;
+	else
+		return y;
+}
+
+//宏的定义
+#define MAXF(X,Y) (X>Y?X:Y)
+
 int main()
 {
 	printf("C Hello!\n");
 
-	int arr[4] = { 1,2,3,4 };
-	printf("%d\n", arr[0]);
-	printf("%d\n", arr[1]);
-	printf("%d\n", arr[2]);
-	printf("%d\n", arr[3]);
+
+	int a = 0;
+	int b = ~a;
+	printf("b is %d\n", b);
+
+	int c = a++;
+	printf("c : %d\n", c);
+	int d = ++a;
+	printf("d : %d\n", d);
+
+	int e = 100;
+	int f = 20;
+	int g = Max(e, f);
+	printf(" e:%d, f:%d  Max(e,f): %d\n", e, f, g);
+	printf(" e:%d, f:%d  MAX(e,f): %d\n", e, f, MAXF(100,10));
 
 	return 0;
 }
