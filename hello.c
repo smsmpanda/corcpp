@@ -187,7 +187,7 @@ int Max(int x, int y) {
 //ºêµÄ¶¨Òå
 #define MAXF(X,Y) (X>Y?X:Y)
 
-int main()
+int main1()
 {
 	printf("C Hello!\n");
 

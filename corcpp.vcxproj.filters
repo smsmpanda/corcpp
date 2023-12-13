@@ -21,5 +21,8 @@
     <ClCompile Include="global.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
