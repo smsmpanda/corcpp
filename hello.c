@@ -7,7 +7,7 @@
 /// </summary>
 void C_GetTypeSize()
 {
-	//printf-C语言本身提供的函数
+	// printf-C语言本身提供的函数
 	printf("Hello World!\n");
 
 	printf("\n");
@@ -30,31 +30,31 @@ void C_TypePrint()
 {
 	printf("数据类型举例.\n");
 
-	//char
+	// char
 	char ch = 'A';
 	printf("char ---> %c\n", ch);
 
-	//short-int16
+	// short-int16
 	short n = 32769;
 	printf("short int ---> %d\n", n);
 
-	//int
+	// int
 	int n1 = 123;
 	printf("int ---> %d\n", n1);
 
-	//long
+	// long
 	long n2 = 123;
 	printf("long ---> %d\n", n2);
 
-	//long long
+	// long long
 	long long n3 = 2423;
 	printf("long long ---> %d\n", n3);
 
-	//float
+	// float
 	float n4 = 5.0f;
 	printf("float ---> %f\n", n4);
 
-	//double
+	// double
 	double n5 = 3.14;
 	printf("double ---> %lf\n", n5);
 
@@ -64,7 +64,8 @@ void C_TypePrint()
 /// <summary>
 /// 计算两数之和
 /// </summary>
-void C_AddTwoNumbers() {
+void C_AddTwoNumbers()
+{
 	int a = 0, b = 0;
 	scanf("%d%d", &a, &b);
 	printf("Add 执行结果：%d", a + b);
@@ -73,12 +74,13 @@ void C_AddTwoNumbers() {
 /// <summary>
 /// 访问全局变量
 /// </summary>
-void C_AccessGlobalValue() {
+void C_AccessGlobalValue()
+{
 	extern int g_val;
 	printf("全局变量g_val --> %d", g_val);
 }
 
-//#define 定义的标识符常量
+// #define 定义的标识符常量
 #define MAX 10
 
 /// <summary>
@@ -94,19 +96,18 @@ enum Sex
 /// <summary>
 /// 常量的使用
 /// </summary>
-void C_ConstVaribleUse() {
-	//常量
+void C_ConstVaribleUse()
+{
+	// 常量
 	const int n = 10;
 	printf("常量n:%d\n", n);
 
+	// #define 定义的标识符常量
+	int arr[MAX] = {0};
 
-	//#define 定义的标识符常量
-	int arr[MAX] = { 0 };
-
-	//常量变量
+	// 常量变量
 	enum Sex sex = FEMALE;
 	sex = SECRET;
-
 
 	printf("枚举 Sex MALE：%d\n", MALE);
 	printf("枚举 Sex FEMALE：%d\n", FEMALE);
@@ -116,18 +117,19 @@ void C_ConstVaribleUse() {
 /// <summary>
 /// 字符串
 /// </summary>
-void C_StringTypeUse() {
+void C_StringTypeUse()
+{
 	//'\0'是字符串结束标志，不计入字符串长度
 	char str[] = "abc";
-	char str1[] = { 'a','b','c' };
+	char str1[] = {'a', 'b', 'c'};
 
-	//3
+	// 3
 	printf("str len :%d\n", strlen(str));
 
-	//随机值，因为没有找到'\0'结束字符
+	// 随机值，因为没有找到'\0'结束字符
 	printf("str1 len :%d\n", strlen(str1));
 
-	//转义字符
+	// 转义字符
 	char str2[] = "c:\\aa\\na\\ta\n";
 	printf(str2);
 
@@ -137,14 +139,17 @@ void C_StringTypeUse() {
 /// <summary>
 /// 选择语句
 /// </summary>
-void C_Ifelse() {
+void C_Ifelse()
+{
 	int input = 0;
 	printf("请选择：");
 	scanf("%d", &input);
-	if (input == 0) {
+	if (input == 0)
+	{
 		printf("回家卖红薯！");
 	}
-	else {
+	else
+	{
 		printf("走向人生巅峰");
 	}
 }
@@ -152,8 +157,9 @@ void C_Ifelse() {
 /// <summary>
 /// Sizeof & Array
 /// </summary>
-void C_Sizeof() {
-	int arr[] = { 1,2,3,4,5,6,7 };
+void C_Sizeof()
+{
+	int arr[] = {1, 2, 3, 4, 5, 6, 7};
 	int len = sizeof(arr) / sizeof(arr[0]);
 	printf("Array variable arr length is %d\n", len);
 
@@ -163,8 +169,7 @@ void C_Sizeof() {
 	printf("sizeof a : %d\n", sizeof a);
 	printf("sizeof arr : %d\n", sizeof(arr));
 
-
-	int arr1[4] = { 1,2,3,4 };
+	int arr1[4] = {1, 2, 3, 4};
 	printf("%d\n", arr1[0]);
 	printf("%d\n", arr1[1]);
 	printf("%d\n", arr1[2]);
@@ -177,20 +182,20 @@ void C_Sizeof() {
 /// <param name="x"></param>
 /// <param name="y"></param>
 /// <returns></returns>
-int Max(int x, int y) {
+int Max(int x, int y)
+{
 	if (x > y)
 		return x;
 	else
 		return y;
 }
 
-//宏的定义
-#define MAXF(X,Y) (X>Y?X:Y)
+// 宏的定义
+#define MAXF(X, Y) (X > Y ? X : Y)
 
 int main1()
 {
 	printf("C Hello!\n");
-
 
 	int a = 0;
 	int b = ~a;
@@ -205,7 +210,7 @@ int main1()
 	int f = 20;
 	int g = Max(e, f);
 	printf(" e:%d, f:%d  Max(e,f): %d\n", e, f, g);
-	printf(" e:%d, f:%d  MAX(e,f): %d\n", e, f, MAXF(100,10));
+	printf(" e:%d, f:%d  MAX(e,f): %d\n", e, f, MAXF(100, 10));
 
 	return 0;
 }
