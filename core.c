@@ -267,7 +267,7 @@ void C_GetNumberString(unsigned int a)
 	}
 }
 
-int main()
+int maincore()
 {
 	// 一维数组
 	int arr[10] = {1, 2, 3}; // 不完全初始化，剩下的元素默认初始化为0

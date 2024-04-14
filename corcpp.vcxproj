@@ -131,6 +131,7 @@
     <ClCompile Include="core.c" />
     <ClCompile Include="global.c" />
     <ClCompile Include="hello.c" />
+    <ClCompile Include="ks0414.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h" />
