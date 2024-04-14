@@ -2,6 +2,9 @@
 #include<stdint.h>
 #include<string.h>
 
+/// <summary>
+/// typedef定义结构体类型
+/// </summary>
 typedef struct  
 {
 	char* company;
@@ -10,7 +13,15 @@ typedef struct
 	char* color;
 } Car;
 
-Car Change(Car *car,char* company,char *color,float w,float h) {
+/// <summary>
+/// 申明结构体并指定变量
+/// </summary>
+struct Point {
+	int x;
+	int y;
+} p,p1;
+
+void Change(Car *car,char* company,char *color,float w,float h) {
 	car->company = "华为汽车";
 	car->color = "武士黑";
 	car->width = 5.32;
@@ -25,7 +36,7 @@ void Print(Car* car) {
 	printf("\n");
 }
 
-int main() {
+void test32() {
 	Car xiaomi;
 	xiaomi.company = "小米汽车";
 	xiaomi.color = "海湾蓝";
@@ -34,11 +45,10 @@ int main() {
 
 	Print(&xiaomi);
 
-	Car huawei = Change(&xiaomi,"华为汽车","西柚色",5.12,1.45);
-	Print(&huawei);
+	Car huawei;
+	Change(&xiaomi, "华为汽车", "西柚色", 5.12, 1.45);
+	Print(&xiaomi);
 }
-
-
 
 void test1() {
 	printf("%s", "好久不见，欢饮回来！\n");
@@ -53,3 +63,12 @@ void test1() {
 	printf("时间：星期%s\n", "c");
 	printf("事件：%s", s1 += 2);
 }
+
+int main_ks0414() {
+
+	test32();
+
+	return 0;
+}
+
+
