@@ -133,6 +133,7 @@
     <ClCompile Include="hello.c" />
     <ClCompile Include="ks0414.c" />
     <ClCompile Include="ks0415.c" />
+    <ClCompile Include="ks0416.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h" />

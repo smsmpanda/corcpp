@@ -38,12 +38,10 @@ void StringType()
 }
 
 
-int main() {
+int main_ks0415() {
 	PrintBasicTypeSizeof();
 	extern int g_val;
 	printf("extern int g_val:%d", g_val);
-
 	StringType();
-
 	return 0;
 }

@@ -33,6 +33,9 @@
     <ClCompile Include="ks0415.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ks0416.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
