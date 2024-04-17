@@ -30,7 +30,7 @@ struct Hero {
 } Mangsen, Dema;
 
 
-int main() {
+int main_ks0416() {
 
 	//ks0416();
 	//ks0416_1();
