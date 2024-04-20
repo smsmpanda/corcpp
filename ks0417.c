@@ -76,7 +76,7 @@ void SayV4() {
 }
 
 
-int main() {
+int main_ks0417() {
 	//Say();
 	//SayV2();
 	//SayV3();

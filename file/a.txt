@@ -1,0 +1,11 @@
+Code Convention
+Comment
+Debug
+Version Control
+Unit Test
+Code Review
+Open Source
+Software Architecture
+Complier
+Interpreter
+Cloud Computing
