@@ -32,19 +32,13 @@ void write_file() {
 	while ((ch = getchar()) != EOF)
 	{
 		//putchar(ch);
-		fputc(ch,fp);
+		fputc(ch, fp);
 	}
 
 	fclose(fp);
 }
 
-
-
-
-
-
-
-int main() {
+int main_ks0418() {
 	read_file();
 	write_file();
 	return 1;

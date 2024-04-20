@@ -42,9 +42,24 @@
     <ClCompile Include="ks0418.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ks0420.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="0420.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="meloc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="examplec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="0420.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

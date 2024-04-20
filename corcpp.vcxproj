@@ -127,8 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="0420.c" />
     <ClCompile Include="add.c" />
     <ClCompile Include="core.c" />
+    <ClCompile Include="examplec.c" />
     <ClCompile Include="global.c" />
     <ClCompile Include="hello.c" />
     <ClCompile Include="ks0414.c" />
@@ -136,9 +138,12 @@
     <ClCompile Include="ks0416.c" />
     <ClCompile Include="ks0417.c" />
     <ClCompile Include="ks0418.c" />
+    <ClCompile Include="ks0420.c" />
+    <ClCompile Include="meloc.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h" />
+    <ClInclude Include="0420.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
