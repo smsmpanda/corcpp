@@ -202,7 +202,7 @@ void example_removesp() {
 }
 
 
-int main() {
+int main_examp() {
 	//examplec_add();
 	//example_mul();
 	//example_max();

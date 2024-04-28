@@ -54,6 +54,12 @@
     <ClCompile Include="examplec.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="0428.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="04281.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
