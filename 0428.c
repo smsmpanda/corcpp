@@ -27,7 +27,7 @@ void game() {
 	}
 }
 
-void menu() {
+void menu_select() {
 	printf("*********\t1.²ÂÊý×Ö\n");
 	printf("*********\t2.ÍË ³ö\n");
 }
@@ -37,7 +37,7 @@ int main_0428() {
 	srand((unsigned int)time(NULL));
 	do
 	{
-		menu();
+		menu_select();
 		scanf("%d", &sel);
 		switch (sel)
 		{

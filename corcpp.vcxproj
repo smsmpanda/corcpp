@@ -133,6 +133,7 @@
     <ClCompile Include="add.c" />
     <ClCompile Include="core.c" />
     <ClCompile Include="examplec.c" />
+    <ClCompile Include="game.c" />
     <ClCompile Include="global.c" />
     <ClCompile Include="hello.c" />
     <ClCompile Include="ks0414.c" />
@@ -146,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="add.h" />
     <ClInclude Include="0420.h" />
+    <ClInclude Include="game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

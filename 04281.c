@@ -26,7 +26,7 @@ int my_strlen(char* str) {
 		return 0;
 }
 
-int main() {
+int main_04281() {
 
 	char arr1[] = "bit";
 	char arr2[20] = "##########";
