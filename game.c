@@ -70,15 +70,16 @@ void PlayerMove(char boarder[ROW][COL], int row, int col) {
 void PCMove(char boarder[ROW][COL], int row, int col) {
 	printf("电脑走：>\n");
 	// 生成两个随机坐标，并下入棋盘
-	int x = rand() % row + 1;
-	int y = rand() % col + 1;
+	
 	while (1)
 	{
+		int x = rand() % row + 1;
+		int y = rand() % col + 1;
 		if (x >= 1 && x <= row && y >= 1 && y <= col) {
 
 			char c = boarder[x - 1][y - 1];
 			if (c != PLACEHOLDER) {
-				printf("该坐标被占用！\n");
+				printf("该坐标被占用，请重新输入！\n");
 				continue;
 			}
 			boarder[x - 1][y - 1] = CHESS_ITEM_PC;
@@ -96,58 +97,70 @@ char IsWin(char boarder[ROW][COL], int row, int col) {
 	{
 		for (j = 0; j < col - 1; j++)
 		{
-			if (boarder[i][j] == boarder[i][j + 1]) {
+			if (boarder[i][j] != PLACEHOLDER && boarder[i][j] == boarder[i][j + 1]) {
 				if (j == col - 2) {
 					return boarder[i][j];
 				}
 				continue;
 			}
+			break;
 		}
 	}
 
+	//整列判断
 	for (i = 0; i < col; i++)
 	{
 		for (j = 0; j < row - 1; j++)
 		{
-			if (boarder[j][i] == boarder[j + 1][i]) {
+			if (boarder[i][j] != PLACEHOLDER && boarder[j][i] == boarder[j + 1][i]) {
 				if (j == row - 2)
 					return boarder[j][i];
 				continue;
 			}
+			break;
 		}
 	}
 
 	// 11 22 33    13 22 31 
 	// 11 22 33 44 14 23 32 41
 	//对角线1
-	for (i = 0; i < row - 2; i++)
+	for (i = 0; i < row - 1; i++)
 	{
-		if (boarder[i][i] == boarder[i + 1][i + 1]) {
+		if (boarder[i][j] != PLACEHOLDER && boarder[i][i] == boarder[i + 1][i + 1]) {
 			if (i == row - 2)
 				return boarder[i][i];
+			continue;
 		}
+		break;
 	}
+
 	//对角线2
-	for (i = 0; i < row; i++)
-	{
-		for (j = col; i > 0; i--)
-		{
-			if (boarder[i][j] == boarder[i + 1][i + 1]) {
-				return boarder[i][i];
-			}
-		}
-	}
+	//for (i = 0; i < row; i++)
+	//{
+	//	for (j = col; i > 0; i--)
+	//	{
+	//		if (boarder[i][j] == boarder[i + 1][i + 1]) {
+	//			return boarder[i][i];
+	//		}
+	//	}
+	//}
 
 	i = 0, j = col - 1;
 	while (i < row - 1)
 	{
-		// 0,3  1,2  2,1  3,0
-		if (boarder[i][j] == boarder[++i][--j]) {
-			return boarder[i][j];
+		// 0,2 1 1 
+		if (boarder[i][j] != PLACEHOLDER && boarder[i][j] == boarder[i + 1][j - 1]) {
+			if (i == row - 2) {
+				return boarder[i][j];
+			}
+			i++;
+			j--;
+			continue;
 		}
+		break;
 	}
 
-	if (1 == IsFull(boarder, row, col)) {
+	if (-1 == IsFull(boarder, row, col)) {
 		return 'Q';
 	}
 
@@ -183,18 +196,18 @@ void play_game() {
 		//玩家下
 		PlayerMove(board, ROW, COL);
 		DisplayBoarder(board, ROW, COL);
-		ret = IsWin(board, ROW, COL);
+		/*ret = IsWin(board, ROW, COL);
 		if (ret != 'C') {
 			break;
-		}
+		}*/
 
 		//人机下
 		PCMove(board, ROW, COL);
 		DisplayBoarder(board, ROW, COL);
-		ret = IsWin(board, ROW, COL);
+		/*ret = IsWin(board, ROW, COL);
 		if (ret != 'C') {
 			break;
-		}
+		}*/
 	}
 	if (ret == CHESS_ITEM_PC) {
 		printf("电脑胜利！");
