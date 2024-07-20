@@ -246,7 +246,7 @@ void game_test() {
 	} while (sel);
 }
 
-int main() {
+int main_game() {
 	srand((unsigned int)time(NULL));
 
 	game_test();
