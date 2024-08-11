@@ -56,7 +56,7 @@ char* fz(char* str)
 	}
 }
 
-int main() {
+int main_0518() {
 
 	int arr[10] = { 1,2,3 };
 	arrtest(arr);

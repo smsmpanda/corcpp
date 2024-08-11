@@ -144,6 +144,8 @@
     <ClCompile Include="ks0418.c" />
     <ClCompile Include="ks0420.c" />
     <ClCompile Include="meloc.c" />
+    <ClCompile Include="point.c" />
+    <ClCompile Include="strcopy.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h" />
