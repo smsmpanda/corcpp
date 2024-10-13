@@ -132,6 +132,7 @@
     <ClCompile Include="04281.c" />
     <ClCompile Include="0518.c" />
     <ClCompile Include="add.c" />
+    <ClCompile Include="Algorithm.c" />
     <ClCompile Include="core.c" />
     <ClCompile Include="examplec.c" />
     <ClCompile Include="game.c" />

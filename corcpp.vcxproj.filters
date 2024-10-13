@@ -72,6 +72,9 @@
     <ClCompile Include="point.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Algorithm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
