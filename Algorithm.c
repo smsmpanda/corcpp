@@ -36,7 +36,7 @@ void NarcissisticNumber()
 	}
 }
 
-int main() {
+int main_algorithm() {
 
 	//水仙花数打印
 	//NarcissisticNumber();
