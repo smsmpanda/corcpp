@@ -46,6 +46,7 @@ int main() {
 	scanf("%d",&line);
 	if (!(line % 2)) {
 		printf("Please enter an odd number!");
+		return 0;
 	}
 
 	// ×ÜÎ»Êı
